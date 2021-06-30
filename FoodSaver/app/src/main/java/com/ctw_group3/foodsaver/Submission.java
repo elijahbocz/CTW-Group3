@@ -119,6 +119,7 @@ public class Submission extends AppCompatActivity{
                         submission.put("address", address);
                         submission.put("foodName", foodName);
                         submission.put("foodDesc", foodDesc);
+                        submission.put("foodImageLink", foodImageLink);
 
                         // Access FireStore instance
                         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -163,13 +164,17 @@ public class Submission extends AppCompatActivity{
                 if (null != selectedImageUri) {
                     // Update the preview image in the layout
                     foodImage.setImageURI(selectedImageUri);
+                    foodImage.getLayoutParams().height = 250;
+                    foodImage.getLayoutParams().width = 250;
 
                     try {
                         // Convert the image pointed at by the URI into a bitmap, then into an array of bytes
                         // Goal is to convert the image to base64
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+                        // Resize the image
+                        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
                         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+                        resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
                         byte[] byteArray = outputStream.toByteArray();
 
                         // Convert the byte array to a Base64 String
@@ -192,6 +197,15 @@ public class Submission extends AppCompatActivity{
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.w(TAG, response.toString());
+                                // Store the link of the image's URL
+                                try {
+                                    // The link is nested inside of an object called data
+                                    JSONObject data =  response.getJSONObject("data");
+                                    // Access the link in the data object and retrieve the link
+                                    foodImageLink = data.getString("link");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }, new Response.ErrorListener() {
                             @Override

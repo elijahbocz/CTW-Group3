@@ -21,19 +21,19 @@
 
             <EditText
                 android:id="@+id/et_name"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:hint="@string/owner_name"
-                android:importantForAutofill="no"
                 android:imeOptions="flagNoEnterAction"
+                android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:padding="10dp"
                 android:textColor="@android:color/black" />
 
             <EditText
                 android:id="@+id/et_store_name"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
@@ -43,7 +43,7 @@
 
             <EditText
                 android:id="@+id/et_mobile"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
@@ -55,7 +55,7 @@
 
             <EditText
                 android:id="@+id/et_address"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
@@ -65,7 +65,7 @@
 
             <EditText
                 android:id="@+id/et_food_name"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
@@ -75,7 +75,7 @@
 
             <EditText
                 android:id="@+id/et_food_desc"
-                android:layout_width="275dp"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:ems="10"
