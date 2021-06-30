@@ -30,11 +30,14 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="store_name">Store Name</string>
     <string name="address">Address</string>
+    <string name="food_name">Food Name</string>
     <string name="food_description">Food Description</string>
     <string name="submit_btn">Submit</string>
+
     <string name="invalid_name">Enter Valid Name</string>
     <string name="invalid_number">Enter valid phone number</string>
     <string name="invalid_storename">Enter valid store name</string>
     <string name="invalid_email">Enter valid email address</string>
     <string name="invalid_website">Enter Valid Website</string>
+    <string name="image_of_food">Image of Food</string>
 </resources>
