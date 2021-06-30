@@ -45,6 +45,11 @@ public class Registration extends AppCompatActivity {
         EditText confirmPasswordInput = findViewById(R.id.ConfirmPasswordInput);
         String confirmPassword = confirmPasswordInput.getText().toString();
 
+        if (email.equals("") || password.equals("") || confirmPassword.equals("")) {
+            emailError.setText("This field can not be empty");
+            passwordError.setText("This field can not be empty");
+        }
+
         if (password.equals(confirmPassword)) {
             // Creates the user
             mAuth.createUserWithEmailAndPassword(email, password)
