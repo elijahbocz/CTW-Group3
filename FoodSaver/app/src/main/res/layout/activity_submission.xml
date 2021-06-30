@@ -8,109 +8,107 @@
     tools:context=".Submission">
 
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:hint="@string/owner_name"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/et_mobile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_mobile"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/mobile_number"
-        android:importantForAutofill="no"
-        android:inputType="phone"
-        android:maxLength="10"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/et_store_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:background="@android:color/white"
-        android:text="@string/submit_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/owner_name"
+                android:importantForAutofill="no"
+                android:imeOptions="flagNoEnterAction"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@android:color/black" />
 
-    <EditText
-        android:id="@+id/et_food_desc"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/food_description"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/food_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <EditText
+                android:id="@+id/et_store_name"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/store_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_food_name"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/food_name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_food_desc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/mobile_number"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp" />
 
-    <EditText
-        android:id="@+id/et_address"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/address"
-        android:inputType="textPostalAddress"
-        app:layout_constraintBottom_toTopOf="@+id/et_food_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/address"
+                android:importantForAutofill="no"
+                android:inputType="textPostalAddress" />
 
-    <ImageView
-        android:id="@+id/food_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:contentDescription="@string/image_of_food"
-        app:layout_constraintBottom_toTopOf="@+id/bt_submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+            <EditText
+                android:id="@+id/et_food_name"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/food_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_store_name"
-        android:layout_width="275dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="@string/store_name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+            <EditText
+                android:id="@+id/et_food_desc"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="@string/food_description"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/upload_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="@string/upload_image_btn" />
+
+            <ImageView
+                android:id="@+id/food_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:contentDescription="@string/image_of_food"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/bt_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/white"
+                android:text="@string/submit_btn" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
