@@ -20,6 +20,7 @@
     <!--  User Activity  -->
     <string name="user_email">Your Email:</string>
     <string name="user_uid">UID:</string>
+    <string name="user_post_submission">Post Submission</string>
     <string name="user_sign_out">Sign Out</string>
 
     <!--  Posts Activity  -->

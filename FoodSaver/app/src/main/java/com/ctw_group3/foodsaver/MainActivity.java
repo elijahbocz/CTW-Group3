@@ -29,9 +29,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Posts.class);
         startActivity(intent);
     }
-
-    public void loadSubmission(View view){
-        Intent intent = new Intent(this, Submission.class);
-        startActivity(intent);
-    }
 }

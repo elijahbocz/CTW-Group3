@@ -31,6 +31,11 @@ public class User extends AppCompatActivity {
         }
     }
 
+    public void loadSubmission(View view){
+        Intent intent = new Intent(this, Submission.class);
+        startActivity(intent);
+    }
+
     public void signOut(View view) {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(this, MainActivity.class);

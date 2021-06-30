@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Submission extends AppCompatActivity{
-    EditText etName,etMobile,etSName,etEmail, etWebsite;
+    EditText etName,etMobile,etSName, etAddress, etFoodName, etFoodDesc;
     Button btSubmit;
     AwesomeValidation awesomeValidation;
     private String TAG = "SubmissionActivity";
@@ -34,6 +34,9 @@ public class Submission extends AppCompatActivity{
         etName = findViewById(R.id.et_name);
         etMobile = findViewById(R.id.et_mobile);
         etSName = findViewById(R.id.et_store_name);
+        etAddress = findViewById(R.id.et_address);
+        etFoodName = findViewById(R.id.et_food_name);
+        etFoodDesc = findViewById(R.id.et_food_desc);
         btSubmit = findViewById(R.id.bt_submit);
 
         // Validators for the EditBoxes
@@ -55,12 +58,18 @@ public class Submission extends AppCompatActivity{
                     String name = etName.getText().toString();
                     String mobile = etMobile.getText().toString();
                     String storeName = etSName.getText().toString();
+                    String address = etAddress.getText().toString();
+                    String foodName = etFoodName.getText().toString();
+                    String foodDesc = etFoodDesc.getText().toString();
 
                     // Map to hold the data pulled from EditBoxes
                     Map<String, Object> submission = new HashMap<>();
                     submission.put("ownerName", name);
                     submission.put("mobile", mobile);
                     submission.put("storeName", storeName);
+                    submission.put("address", address);
+                    submission.put("foodName", foodName);
+                    submission.put("foodDesc", foodDesc);
 
                     // Access FireStore instance
                     FirebaseFirestore db = FirebaseFirestore.getInstance();
