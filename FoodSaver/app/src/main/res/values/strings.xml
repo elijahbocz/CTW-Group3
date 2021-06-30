@@ -5,6 +5,7 @@
     <string name="posts_btn">View Posts</string>
     <string name="owner_login_btn">Owner Login</string>
     <string name="registration_btn">Owner Registration</string>
+    <string name="submission_btn"> Owner Submission</string>
 
     <!--  Registration Activity  -->
     <string name="email_label">Email:</string>
@@ -23,4 +24,11 @@
 
     <!--  Posts Activity  -->
     <string name="posts_label">Posts</string>
+
+    <!--  Submission Activity  -->
+    <string name="invalid_name">Enter Valid Name</string>
+    <string name="invalid_number">Enter valid phone number</string>
+    <string name="invalid_storename">Enter valid store name</string>
+    <string name="invalid_email">Enter valid email address</string>
+    <string name="invalid_website">Enter Valid Website</string>
 </resources>
