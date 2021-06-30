@@ -164,6 +164,7 @@ public class Submission extends AppCompatActivity{
                 if (null != selectedImageUri) {
                     // Update the preview image in the layout
                     foodImage.setImageURI(selectedImageUri);
+                    // Resize the image to 250x250
                     foodImage.getLayoutParams().height = 250;
                     foodImage.getLayoutParams().width = 250;
 
@@ -172,7 +173,7 @@ public class Submission extends AppCompatActivity{
                         // Goal is to convert the image to base64
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
                         // Resize the image
-                        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+                        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, 250, 250, true);
                         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                         resizedBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
                         byte[] byteArray = outputStream.toByteArray();
