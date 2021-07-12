@@ -12,10 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodSaver">
-        <activity android:name=".User"></activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Posts" />
-        <activity android:name=".Registration" />
+        <activity android:name=".FoodOwner"></activity>
+        <activity android:name=".LoginFoodOwner" />
+        <activity android:name=".Customer" />
+        <activity android:name=".RegistrationFoodOwner" />
         <activity android:name=".Submission" />
         <activity android:name=".MainActivity">
             <intent-filter>

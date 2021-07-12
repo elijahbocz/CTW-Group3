@@ -1,31 +1,29 @@
 package com.ctw_group3.foodsaver;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class Registration extends AppCompatActivity {
+public class RegistrationCustomer extends AppCompatActivity {
     // Shared instance of FirebaseAuth object
     private FirebaseAuth mAuth;
-    private String TAG = "Registration";
+    private String TAG = "RegistrationCustomer";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_registrationfoodowner);
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -59,7 +57,7 @@ public class Registration extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success");
-                                loadUser();
+                                loadCustomer();
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -74,8 +72,8 @@ public class Registration extends AppCompatActivity {
         }
     }
 
-    public void loadUser() {
-        Intent intent = new Intent(this, User.class);
+    public void loadCustomer() {
+        Intent intent = new Intent(this, Customer.class);
         startActivity(intent);
     }
 }
