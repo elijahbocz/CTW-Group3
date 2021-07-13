@@ -19,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void loadRC(View view) {
+        Intent intent = new Intent(this, RegistrationCustomer.class);
+        startActivity(intent);
+    }
+
+    public void loadRFO(View view) {
+        Intent intent = new Intent(this, RegistrationFoodOwner.class);
+        startActivity(intent);
+    }
+
 //    public void loadRegistration(View view) {
 //        Intent intent = new Intent(this, RegistrationFoodOwner.class);
 //        startActivity(intent);

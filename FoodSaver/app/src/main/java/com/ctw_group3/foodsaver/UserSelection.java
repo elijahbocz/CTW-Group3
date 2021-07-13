@@ -27,30 +27,30 @@ public class UserSelection extends AppCompatActivity {
         setContentView(R.layout.activity_userselection);
 
         mAuth = FirebaseAuth.getInstance();
-        Button FoodOwnerButton = findViewById(R.id.FOButton);
-        Button CustomerButton = findViewById(R.id.CButton);
-
-        FoodOwnerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadRFO();
-            }
-        });
-
-        CustomerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadRC();
-            }
-        });
+//        Button FoodOwnerButton = findViewById(R.id.FOButton);
+//        Button CustomerButton = findViewById(R.id.CButton);
+//
+//        FoodOwnerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                loadRFO();
+//            }
+//        });
+//
+//        CustomerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                loadRC();
+//            }
+//        });
     }
 
-    public void loadRC() {
+    public void loadRC(View view) {
         Intent intent = new Intent(this, RegistrationCustomer.class);
         startActivity(intent);
     }
 
-    public void loadRFO() {
+    public void loadRFO(View view) {
         Intent intent = new Intent(this, RegistrationFoodOwner.class);
         startActivity(intent);
     }
