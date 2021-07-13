@@ -39,7 +39,6 @@
     <string name="invalid_name">Enter Valid Name</string>
     <string name="invalid_number">Enter valid phone number</string>
     <string name="invalid_storename">Enter valid store name</string>
-    <string name="invalid_email">Enter valid email address</string>
-    <string name="invalid_website">Enter Valid Website</string>
+    <string name="invalid_address">Enter valid address</string>
     <string name="image_of_food">Image of Food</string>
 </resources>

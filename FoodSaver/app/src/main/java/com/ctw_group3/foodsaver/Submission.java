@@ -86,6 +86,8 @@ public class Submission extends AppCompatActivity{
                     ,"[5-9]{1}[0-9]{9}$",R.string.invalid_number);
             awesomeValidation.addValidation(this,R.id.et_store_name
                     ,RegexTemplate.NOT_EMPTY,R.string.invalid_storename);
+            awesomeValidation.addValidation(this,R.id.et_address
+                    ,RegexTemplate.NOT_EMPTY,R.string.invalid_address);
 
             btUploadImage.setOnClickListener(new View.OnClickListener() {
                 @Override
