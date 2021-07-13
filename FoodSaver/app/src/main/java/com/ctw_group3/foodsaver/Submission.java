@@ -101,8 +101,6 @@ public class Submission extends AppCompatActivity{
                 @Override
                 public void onClick(View view) {
                     if (awesomeValidation.validate()){
-                        Toast.makeText(getApplicationContext()
-                                ,"Validation Successful.",Toast.LENGTH_SHORT).show();
                         // Pull data from EditBoxes
                         String name = etName.getText().toString();
                         String mobile = etMobile.getText().toString();
@@ -130,16 +128,21 @@ public class Submission extends AppCompatActivity{
                                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                     @Override
                                     public void onSuccess(DocumentReference documentReference) {
+                                        Toast.makeText(getApplicationContext()
+                                                ,"Upload successful",Toast.LENGTH_SHORT).show();
                                         Log.d(TAG, "DocumentSnapShot added with ID: " + documentReference.get());
+                                        loadFoodOwner();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(getApplicationContext()
+                                                ,"Upload failed",Toast.LENGTH_SHORT).show();
                                         Log.w(TAG, "Error adding document", e);
                                     }
                                 });
-                    }else {
+                    } else {
                         Toast.makeText(getApplicationContext(),
                                 "Validation Failed.",Toast.LENGTH_SHORT).show();
                     }
@@ -150,6 +153,11 @@ public class Submission extends AppCompatActivity{
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
+    }
+
+    public void loadFoodOwner() {
+        Intent intent = new Intent(this, FoodOwner.class);
+        startActivity(intent);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
