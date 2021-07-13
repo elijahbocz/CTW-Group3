@@ -14,8 +14,10 @@
         android:theme="@style/Theme.FoodSaver">
         <activity android:name=".FoodOwner"></activity>
         <activity android:name=".LoginFoodOwner" />
-        <activity android:name=".Customer" />
         <activity android:name=".RegistrationFoodOwner" />
+        <activity android:name=".Customer" />
+        <activity android:name=".LoginCustomer" />
+        <activity android:name=".RegistrationCustomer" />
         <activity android:name=".Submission" />
         <activity android:name=".MainActivity">
             <intent-filter>
