@@ -65,12 +65,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/PasswordError"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/ConfirmPasswordLabel"
@@ -91,14 +91,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/RegisterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ConfirmPasswordLabel"
-        app:layout_constraintVertical_bias="0.0"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/RegisterButton"
@@ -108,7 +108,7 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="216dp"
         android:width="150dp"
-        android:onClick="registerUser"
+        android:onClick="registerFoodOwner"
         android:text="@string/registration_btn"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,5 +128,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadLoginFoodOwner"
+        android:text="Owner Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

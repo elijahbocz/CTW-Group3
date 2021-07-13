@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class UserSelection extends AppCompatActivity {
     // Shared instance of FirebaseAuth object
-    private FirebaseAuth mAuth;
+    //private FirebaseAuth mAuth;
     private String TAG = "UserSelection";
 
     @Override
@@ -26,7 +26,7 @@ public class UserSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userselection);
 
-        mAuth = FirebaseAuth.getInstance();
+        //mAuth = FirebaseAuth.getInstance();
 //        Button FoodOwnerButton = findViewById(R.id.FOButton);
 //        Button CustomerButton = findViewById(R.id.CButton);
 //

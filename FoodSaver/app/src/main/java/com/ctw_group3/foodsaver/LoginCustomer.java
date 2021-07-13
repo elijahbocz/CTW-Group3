@@ -23,7 +23,7 @@ public class LoginCustomer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loginfoodowner);
+        setContentView(R.layout.activity_logincustomer);
 
         mAuth = FirebaseAuth.getInstance();
     }

@@ -28,7 +28,7 @@ public class RegistrationFoodOwner extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
-    public void registerUser(View view) {
+    public void registerFoodOwner(View view) {
         // Clear old errors if needed
         TextView emailError = findViewById(R.id.EmailError);
         emailError.setText("");
@@ -57,7 +57,7 @@ public class RegistrationFoodOwner extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success");
-                                loadFoodOwner();
+                                loadFoodOwner(view);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -72,8 +72,12 @@ public class RegistrationFoodOwner extends AppCompatActivity {
         }
     }
 
-    public void loadFoodOwner() {
+    public void loadFoodOwner(View view) {
         Intent intent = new Intent(this, FoodOwner.class);
+        startActivity(intent);
+    }
+    public void loadLoginFoodOwner(View view){
+        Intent intent = new Intent(this, LoginFoodOwner.class);
         startActivity(intent);
     }
 }

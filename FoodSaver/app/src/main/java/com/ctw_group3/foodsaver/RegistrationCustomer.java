@@ -23,12 +23,12 @@ public class RegistrationCustomer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrationfoodowner);
+        setContentView(R.layout.activity_registrationcustomer);
 
         mAuth = FirebaseAuth.getInstance();
     }
 
-    public void registerUser(View view) {
+    public void registerCustomer(View view) {
         // Clear old errors if needed
         TextView emailError = findViewById(R.id.EmailError);
         emailError.setText("");

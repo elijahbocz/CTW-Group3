@@ -108,7 +108,7 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="216dp"
         android:width="150dp"
-        android:onClick="registerUser"
+        android:onClick="registerCustomer"
         android:text="Customer Registration"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
