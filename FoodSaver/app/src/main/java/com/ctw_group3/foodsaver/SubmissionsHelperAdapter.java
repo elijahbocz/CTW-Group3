@@ -51,7 +51,7 @@ public class SubmissionsHelperAdapter extends RecyclerView.Adapter<SubmissionsHe
                 intent.putExtra("mobile", datalist.get(position).getMobile());
                 intent.putExtra("address", datalist.get(position).getAddress());
                 intent.putExtra("foodImageLink", datalist.get(position).getFoodImageLink());
-
+                intent.putExtra("docId", datalist.get(position).getDocId());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.t1.getContext().startActivity(intent);

@@ -1,19 +1,21 @@
 package com.ctw_group3.foodsaver;
 
 public class SubmissionsModel {
-    String address,foodDesc,foodImageLink, foodName, mobile, ownerName, storename;
+    String address,foodDesc,foodImageLink, foodName, mobile, ownerName, storename, docId;
+    boolean claimed;
 
     public SubmissionsModel(){}
 
-    public SubmissionsModel(String address, String foodDesc, String foodImageLink, String foodName, String mobile, String ownerName, String storename){
+    public SubmissionsModel(String address, boolean claimed, String foodDesc, String foodImageLink, String foodName, String mobile, String ownerName, String storename){
         this.address = address;
+        this.claimed = claimed;
         this.foodDesc = foodDesc;
         this.foodImageLink = foodImageLink;
         this.foodName = foodName;
         this.mobile =mobile;
         this.ownerName = ownerName;
         this.storename =storename;
-
+        this.docId = docId;
     }
 
     public String getAddress() {
@@ -23,6 +25,10 @@ public class SubmissionsModel {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public boolean getClaimed() { return claimed; }
+
+    public void setClaimed(boolean claimed) { this.claimed = claimed; }
 
     public String getFoodDesc() {
         return foodDesc;
@@ -71,4 +77,8 @@ public class SubmissionsModel {
     public void setStorename(String storename) {
         this.storename = storename;
     }
+
+    public String getDocId() { return docId; }
+
+    public void setDocId(String docId) { this.docId = docId; }
 }

@@ -44,7 +44,10 @@ public class SubmissionsDisplay extends AppCompatActivity {
                 for (DocumentSnapshot d:list)
                 {
                     SubmissionsModel obj = d.toObject(SubmissionsModel.class);
-                    datalist.add(obj);
+                    obj.setDocId(d.getId());
+                    if (obj.getClaimed() != true) {
+                        datalist.add(obj);
+                    }
                 }
                 adapter.notifyDataSetChanged();
             }

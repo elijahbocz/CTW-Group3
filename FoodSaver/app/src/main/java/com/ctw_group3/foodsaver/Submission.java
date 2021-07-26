@@ -120,6 +120,7 @@ public class Submission extends AppCompatActivity{
                         submission.put("foodName", foodName);
                         submission.put("foodDesc", foodDesc);
                         submission.put("foodImageLink", foodImageLink);
+                        submission.put("claimed", false);
 
                         // Access FireStore instance
                         FirebaseFirestore db = FirebaseFirestore.getInstance();
