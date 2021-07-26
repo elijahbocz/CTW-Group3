@@ -6,12 +6,6 @@
     android:gravity="center"
     android:background="@color/design_default_color_background">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="6dp">
-    </RelativeLayout>
-
     <TextView
         android:id="@+id/t11"
         android:layout_width="match_parent"
@@ -19,7 +13,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="FoodName1"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -38,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="00sp"
         android:gravity="center"
-        android:text="ashley laine walk"
         android:textColor="#000"
         android:textSize="20sp" />
 
@@ -48,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="00sp"
         android:gravity="center"
-        android:text="7771231234"
         android:textColor="#000"
         android:textSize="20sp" />
 
@@ -57,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="spicy"
         android:textColor="#000"
         android:textSize="20sp" />
 
@@ -70,7 +60,7 @@
         android:layout_marginEnd="20sp"
         android:layout_marginBottom="20sp"
         android:padding="5dp"
-        android:text="Back"
+        android:text="@string/submission_detail_back_btn"
         android:textColor="#fff"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -80,7 +70,7 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:padding="5dp"
-        android:text="Claim"
+        android:text="@string/submission_detail_claim_btn"
         android:textColor="#fff"
         android:textSize="18sp"
         android:textStyle="bold" />

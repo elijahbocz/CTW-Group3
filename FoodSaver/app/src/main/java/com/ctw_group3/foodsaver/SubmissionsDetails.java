@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
@@ -43,7 +44,7 @@ public class SubmissionsDetails extends AppCompatActivity {
         t1.setText(getIntent().getStringExtra("foodName").toString());
         t3.setText(getIntent().getStringExtra("mobile").toString());
         t4.setText(getIntent().getStringExtra("address").toString());
-        idImg1.setImageResource(getIntent().getIntExtra("foodImageLink",0));
+        Glide.with(this).load(getIntent().getStringExtra("foodImageLink")).into(idImg1);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
