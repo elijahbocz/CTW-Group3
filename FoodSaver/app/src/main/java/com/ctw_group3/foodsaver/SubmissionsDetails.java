@@ -61,7 +61,6 @@ public class SubmissionsDetails extends AppCompatActivity {
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
 
                 final DocumentReference submissionsDocRef = db.collection("submissions").document(getIntent().getStringExtra("docId"));
-
                 db.runTransaction(new Transaction.Function<Void>() {
                     @Override
                     public Void apply(Transaction transaction) throws FirebaseFirestoreException {
@@ -82,8 +81,25 @@ public class SubmissionsDetails extends AppCompatActivity {
                         Log.w(TAG, "Transaction failure.", e);
                     }
                 });
+                loadCustomerActivity();
+
                 finish();
             }
         });
+    }
+
+    public void loadCustomerActivity() {
+        String foodDesc = t2.getText().toString();
+        String foodName = t1.getText().toString();
+        String mobile = t3.getText().toString();
+        String address = t4.getText().toString();
+
+        Intent intent = new Intent(this, Customer.class);
+        intent.putExtra("foodDesc", foodDesc);
+        intent.putExtra("foodName", foodName);
+        intent.putExtra("mobile", mobile);
+        intent.putExtra("address", address);
+
+        startActivity(intent);
     }
 }

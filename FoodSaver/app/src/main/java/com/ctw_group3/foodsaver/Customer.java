@@ -3,6 +3,7 @@ package com.ctw_group3.foodsaver;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -16,8 +17,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class Customer extends AppCompatActivity {
-    TextView foodname;
     // Shared instance of FirebaseAuth object
+    private TextView foodName, foodDesc, mobile, address, customerEmail;
     private FirebaseAuth mAuth;
     private String TAG = "Customer";
 
@@ -27,30 +28,25 @@ public class Customer extends AppCompatActivity {
         setContentView(R.layout.activity_customer);
         mAuth = FirebaseAuth.getInstance();
 
-        foodname = findViewById(R.id.post);
-
-
         // Ensure the user is signed in
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String userEmail = user.getEmail();
+            customerEmail = findViewById(R.id.CustomerEmail);
+            customerEmail.setText(userEmail);
 
-        // Access FireStore instance
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+            foodName = findViewById(R.id.ROFoodNameValue);
+            foodDesc = findViewById(R.id.ROFoodDescValue);
+            mobile = findViewById(R.id.ROMobileValue);
+            address = findViewById(R.id.ROAddressValue);
 
-        //read the data from the database
-        db.collection("submissions")
-            .get()
-            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                    if (task.isSuccessful()) {
-                        for (QueryDocumentSnapshot document : task.getResult()) {
-                            Log.d(TAG, document.getId() + " => " + document.getData());
-                            foodname.setText((CharSequence) document.get("name"));
-                        }
-                    } else {
-                        Log.w(TAG, "Error getting documents.", task.getException());
-                    }
-                }
-            });
+            foodName.setText(getIntent().getStringExtra("foodName"));
+            foodDesc.setText(getIntent().getStringExtra("foodDesc"));
+            mobile.setText(getIntent().getStringExtra("mobile"));
+            address.setText(getIntent().getStringExtra("address"));
+        } else {
+            Intent intent = new Intent(this, LoginCustomer.class);
+            startActivity(intent);
+        }
     }
 }

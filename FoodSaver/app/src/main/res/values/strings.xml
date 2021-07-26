@@ -42,4 +42,11 @@
     <string name="invalid_storename">Enter valid store name</string>
     <string name="invalid_address">Enter valid address</string>
     <string name="image_of_food">Image of Food</string>
+
+    <!--  Customer Activity  -->
+    <string name="recent_order_label">Your recent order:</string>
+    <string name="recent_order_food_name">Food Name: </string>
+    <string name="recent_order_desc">Food Desc: </string>
+    <string name="recent_order_address">Address: </string>
+    <string name="recent_order_mobile">Mobile: </string>
 </resources>

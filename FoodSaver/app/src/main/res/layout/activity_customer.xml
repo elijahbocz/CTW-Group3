@@ -10,5 +10,119 @@
         android:id="@+id/CustomerEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email_label" />
+        android:layout_marginBottom="64dp"
+        android:text="@string/email_label"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="318dp"
+        android:layout_height="213dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252">
+
+        <TextView
+            android:id="@+id/RecentOrderLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recent_order_label"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/RecentOrderFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp"
+                android:text="@string/recent_order_food_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ROFoodNameValue"
+                android:layout_width="242dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/RecentOrderAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp"
+                android:text="@string/recent_order_address"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ROAddressValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/RecentOrderFoodDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp"
+                android:text="@string/recent_order_desc"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ROFoodDescValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/RecentOrderMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="1dp"
+                android:text="@string/recent_order_mobile"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ROMobileValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="1dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
