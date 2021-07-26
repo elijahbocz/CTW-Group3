@@ -16,6 +16,7 @@
 
     <!--  Login Activity  -->
     <string name="login_btn">Login</string>
+    <string name="customer_login_btn">Customer Login</string>
 
     <!--  User Activity  -->
     <string name="user_email">Your Email:</string>

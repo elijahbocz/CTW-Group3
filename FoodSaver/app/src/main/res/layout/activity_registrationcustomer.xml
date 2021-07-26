@@ -106,12 +106,12 @@
         android:layout_height="48dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="40dp"
         android:width="150dp"
         android:onClick="registerCustomer"
         android:text="Customer Registration"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/CustomerLoginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent" />
@@ -127,6 +127,17 @@
         app:layout_constraintBottom_toTopOf="@+id/ConfirmPasswordLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CustomerLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:onClick="loadCustomerLogin"
+        android:text="@string/customer_login_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

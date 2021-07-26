@@ -38,19 +38,19 @@ public class Customer extends AppCompatActivity {
 
         //read the data from the database
         db.collection("submissions")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                                foodname.setText((CharSequence) document.get("name"));
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
+            .get()
+            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            Log.d(TAG, document.getId() + " => " + document.getData());
+                            foodname.setText((CharSequence) document.get("name"));
                         }
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.getException());
                     }
-                });
+                }
+            });
     }
 }

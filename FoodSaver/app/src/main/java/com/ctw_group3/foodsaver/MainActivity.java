@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_userselection);
     }
 
-
-
     public void loadRC(View view) {
         Intent intent = new Intent(this, RegistrationCustomer.class);
         startActivity(intent);

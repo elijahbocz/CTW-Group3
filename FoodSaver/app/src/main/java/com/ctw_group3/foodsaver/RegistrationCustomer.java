@@ -76,4 +76,9 @@ public class RegistrationCustomer extends AppCompatActivity {
         Intent intent = new Intent(this, Customer.class);
         startActivity(intent);
     }
+
+    public void loadCustomerLogin(View view) {
+        Intent intent = new Intent(this, LoginCustomer.class);
+        startActivity(intent);
+    }
 }

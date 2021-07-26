@@ -55,7 +55,7 @@ public class LoginCustomer extends AppCompatActivity {
     }
 
     public void loadPosts() {
-        Intent intent = new Intent(this, Customer.class);
+        Intent intent = new Intent(this, SubmissionsDisplay.class);
         startActivity(intent);
     }
 }
