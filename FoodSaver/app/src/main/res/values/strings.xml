@@ -48,7 +48,7 @@
     <string name="submission_detail_claim_btn">Claim</string>
 
     <!--  Customer Activity  -->
-    <string name="recent_order_label">Your recent order:</string>
+    <string name="recent_order_label">Your recent claim:</string>
     <string name="recent_order_food_name">Food Name: </string>
     <string name="recent_order_desc">Food Desc: </string>
     <string name="recent_order_address">Address: </string>

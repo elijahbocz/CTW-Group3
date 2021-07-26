@@ -67,15 +67,15 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/RecentOrderAddress"
+                android:id="@+id/RecentOrderFoodDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="1dp"
-                android:text="@string/recent_order_address"
+                android:text="@string/recent_order_desc"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/ROAddressValue"
+                android:id="@+id/ROFoodDescValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="1dp" />
@@ -88,15 +88,15 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/RecentOrderFoodDesc"
+                android:id="@+id/RecentOrderAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="1dp"
-                android:text="@string/recent_order_desc"
+                android:text="@string/recent_order_address"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/ROFoodDescValue"
+                android:id="@+id/ROAddressValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="1dp" />
