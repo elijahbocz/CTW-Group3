@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -48,5 +49,10 @@ public class Customer extends AppCompatActivity {
             Intent intent = new Intent(this, LoginCustomer.class);
             startActivity(intent);
         }
+    }
+
+    public void loadSubmissions(View view) {
+        Intent intent = new Intent(this, SubmissionsDisplay.class);
+        startActivity(intent);
     }
 }
